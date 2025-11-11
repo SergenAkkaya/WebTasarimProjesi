@@ -4,7 +4,10 @@ body {
         text-decoration: none;
         font-weight: 700;
     }
-    font-family: Poppins, sans-serif;
+
+    font-family: Poppins,
+    sans-serif;
+
     a:hover {
         color: red;
     }
@@ -65,7 +68,7 @@ body {
     flex-wrap: wrap;
     gap: 15px;
     height: 200px;
-    width: 100%;
+    width: 80%;
     margin-top: 20px;
 }
 
@@ -80,9 +83,246 @@ body {
     font-size: x-large;
     border-radius: 16px;
     color: rgba(9, 9, 9, 0.7);
-    width: 250px;
+    width: 200px;
     padding: 10px;
 }
-i{
+
+i {
     font-size: 50px;
+}
+
+.about-section {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+    padding: 3rem;
+    font-family: Poppins, sans-serif;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.branches {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.branch-card {
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.branch-card:nth-child(2n) {
+    background: linear-gradient(180deg, #f1f3f5 0%, #ffffff 100%);
+}
+
+.branch-card:nth-child(1) {
+    border-left: 6px solid #ff6b6b;
+}
+
+.branch-card:nth-child(2) {
+    border-left: 6px solid #4dabf7;
+}
+
+.branch-card:nth-child(3) {
+    border-left: 6px solid #ffd43b;
+}
+
+.branch-card:nth-child(4) {
+    border-left: 6px solid #6bcB77;
+}
+
+
+.branch-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+}
+
+.branch-meta {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+
+@media (max-width:576px) {
+    .branch-card {
+        padding: 1rem;
+    }
+}
+
+/* Bölüm başlıkları */
+.section-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #222;
+    border-left: 6px solid #ff6b6b;
+    padding-left: 12px;
+}
+
+/* Menü kartları */
+.menu-card {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.menu-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.menu-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.menu-desc {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.6rem;
+}
+
+.menu-price {
+    font-weight: 700;
+    color: #000;
+    font-size: 1rem;
+}
+
+/* Ek Malzeme Kartları */
+.addon-card {
+    background: #f1f3f5;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.25s;
+}
+
+.addon-card:hover {
+    background: #e9ecef;
+}
+
+/* İçecek listesi */
+.drink-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.drink-list li {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    transition: background 0.25s ease;
+}
+
+.drink-list li:hover {
+    background: #f8f9fa;
+}
+
+/* Responsive düzen */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .menu-card {
+        padding: 1rem;
+    }
+
+    .addon-card {
+        font-size: 0.9rem;
+    }
+}
+
+/* iletisim */
+.contact-section {
+    max-width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 3rem 2.5rem;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #222;
+    border-left: 6px solid #ff6b6b;
+    padding-left: 14px;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #444;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    padding: 0.8rem 1rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-control:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 107, 0.2);
+}
+
+.btn-send {
+    background-color: #ff6b6b;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.btn-send:hover {
+    background-color: #ff3b3b;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: #666;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    .contact-section {
+        padding: 2rem 1.5rem;
+        margin: 40px 1rem;
+    }
 }
