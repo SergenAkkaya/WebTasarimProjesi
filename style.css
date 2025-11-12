@@ -109,62 +109,82 @@ h2 {
 p {
     line-height: 1.8;
 }
-
 .branches {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
 .branch-card {
-    background: var(--box-bg);
-    border: 1px solid var(--box-border);
-    border-radius: 10px;
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-.branch-card:nth-child(2n) {
-    background: linear-gradient(180deg, #f1f3f5 0%, #ffffff 100%);
+.branch-card:hover {
+  transform: translateY(-5px);
 }
-
-.branch-card:nth-child(1) {
-    border-left: 6px solid #ff6b6b;
-}
-
-.branch-card:nth-child(2) {
-    border-left: 6px solid #4dabf7;
-}
-
-.branch-card:nth-child(3) {
-    border-left: 6px solid #ffd43b;
-}
-
-.branch-card:nth-child(4) {
-    border-left: 6px solid #6bcB77;
-}
-
 
 .branch-title {
-    font-weight: 700;
-    font-size: 1.125rem;
-    margin-bottom: 0.25rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
 }
 
 .branch-meta {
-    color: #6c757d;
-    font-size: 0.95rem;
+  font-size: 15px;
+  margin-bottom: 5px;
 }
 
+/* YEMEKSEPETİ BUTONU */
+.btn-order {
+  display: inline-block;
+  margin-top: 10px;
+  background: #c62828;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
 
-@media (max-width:576px) {
-    .branch-card {
-        padding: 1rem;
-    }
+.btn-order:hover {
+  background: #a91e1e;
+}
+
+/* HARİTA */
+.branch-map {
+  margin-top: 15px;
+}
+
+.branch-map iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-box {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .branches {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Bölüm başlıkları */
@@ -175,7 +195,13 @@ p {
     border-left: 6px solid #ff6b6b;
     padding-left: 12px;
 }
-
+.menu-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
 /* Menü kartları */
 .menu-card {
     background: #ffffff;
@@ -184,6 +210,7 @@ p {
     padding: 1.25rem 1.5rem;
     transition: all 0.25s ease-in-out;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    max-width: 50%;
 }
 
 .menu-card:hover {
@@ -230,6 +257,9 @@ p {
 .drink-list {
     list-style: none;
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .drink-list li {
@@ -261,68 +291,146 @@ p {
     }
 }
 
-/* iletisim */
+.main-content {
+  margin-top: 50px;
+}
+
+/* FORM BÖLÜMÜ */
 .contact-section {
-    max-width: 100%;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    padding: 3rem 2.5rem;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .section-title {
-    font-weight: 700;
-    font-size: 2rem;
-    color: #222;
-    border-left: 6px solid #ff6b6b;
-    padding-left: 14px;
-    margin-bottom: 2rem;
-    text-align: left;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #c62828;
 }
 
-label {
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-    color: #444;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.form-control {
-    border-radius: 10px;
-    border: 1px solid #dee2e6;
-    padding: 0.8rem 1rem;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+.contact-form label {
+  font-weight: bold;
 }
 
-.form-control:focus {
-    border-color: #ff6b6b;
-    box-shadow: 0 0 0 0.2rem rgba(255, 107, 107, 0.2);
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c62828;
+  outline: none;
+}
+
+/* BUTON */
 .btn-send {
-    background-color: #ff6b6b;
-    border: none;
-    color: #fff;
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    border-radius: 50px;
-    transition: background 0.25s ease, transform 0.2s ease;
+  background: #c62828;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 150px;
+  align-self: center;
+  transition: background 0.3s;
 }
 
 .btn-send:hover {
-    background-color: #ff3b3b;
-    transform: translateY(-2px);
+  background: #a91e1e;
 }
 
+/* İLETİŞİM BİLGİSİ */
 .contact-info {
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    color: #666;
-    text-align: center;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+@media (max-width: 992px) {
+  .header_links {
+    gap: 15px;
+  }
+
+  .header_links a {
+    font-size: 15px;
+  }
+
+  .contact-section {
+    padding: 25px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
 }
 
-@media (max-width: 576px) {
-    .contact-section {
-        padding: 2rem 1.5rem;
-        margin: 40px 1rem;
-    }
+/* Mobil boyutu (max 768px) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header_logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .header_links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .main-content {
+    margin-top: 30px;
+  }
+
+  .contact-section {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .btn-send {
+    width: 100%;
+  }
+}
+
+/* Küçük telefonlar (max 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .header_links a {
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+  }
+
+  .btn-send {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
