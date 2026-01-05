@@ -59,9 +59,7 @@ body {
 .title-2 {
     width: 50%;
     font-size: 24px;
-
 }
-
 .content-main {
     display: flex;
     justify-content: space-between;
@@ -169,10 +167,6 @@ p {
 }
 
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
 
   .header-box {
     flex-direction: column;
@@ -182,6 +176,13 @@ p {
 
   .branches {
     grid-template-columns: 1fr;
+  }
+  .title-2{
+    width: 98% !important;
+  }
+  .content-main{
+    justify-content: center !important;
+    gap: 25px !important;
   }
 }
 
@@ -376,12 +377,6 @@ p {
 }
 
 @media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
   .header_logo img {
     width: 80px;
     height: 80px;
@@ -457,8 +452,8 @@ p {
 }
 
 .footer-col h3 {
-    color: #000000;
-    font-size: 1.1rem;
+    color: #ffffff;
+    font-size: 1.3rem;
     font-weight: 800;
     margin-bottom: 20px;
 }
